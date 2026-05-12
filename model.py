@@ -17,7 +17,10 @@ def train():
             random_state=42
         )
 
-        model = DecisionTreeClassifier(random_state=42)
+        model = DecisionTreeClassifier(
+            random_state=42,
+            ccp_alpha=0.0
+        )
 
         model.fit(X_train, y_train)
 
